@@ -1,7 +1,7 @@
-import React, {Component} from "react";
-import ReactDOM from "react-dom";
-// import ReactDOM from "./kreact/react-dom";
-// import Component from "./kreact/Component";
+// import React, { Component } from "react";
+// import ReactDOM from "react-dom";
+import ReactDOM from "./kreact/react-dom";
+import Component from "./kreact/Component";
 
 import "./index.css";
 
@@ -26,7 +26,7 @@ function FunctionComponent(props) {
 const jsx = (
   <div className="border">
     <p>React</p>
-    <p>源码</p>
+    <a href="https://github.com/zhaoyun02/react-source-code" target="blank">源码</a>
     <FunctionComponent name="函数组件" />
     <ClassComponent name="类组件" />
 
@@ -47,4 +47,3 @@ const jsx = (
 );
 
 ReactDOM.render(jsx, document.getElementById("root"));
-
