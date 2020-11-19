@@ -1,6 +1,6 @@
 // import React, { Component } from "react";
 // import ReactDOM from "react-dom";
-import ReactDOM from "./kreact/react-dom";
+import ReactDOM from "./kreact/react-dom_2";
 import Component from "./kreact/Component";
 
 import "./index.css";
@@ -39,10 +39,10 @@ const jsx = (
       ))}
     </ul> */}
 
-    <>
+    {/* <>
       <h1>111</h1>
       <h1>222</h1>
-    </>
+    </> */}
   </div>
 );
 
