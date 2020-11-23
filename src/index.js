@@ -1,6 +1,6 @@
 // import React, { Component } from "react";
 // import ReactDOM from "react-dom";
-import ReactDOM from "./kreact/react-dom_2";
+import ReactDOM, { useState } from "./kreact/react-dom_3";
 import Component from "./kreact/Component";
 
 import "./index.css";
@@ -15,10 +15,26 @@ class ClassComponent extends Component {
   }
 }
 
+// function FunctionComponent(props) {
+//   return (
+//     <div className="border">
+//       <p>{props.name}</p>
+//     </div>
+//   );
+// }
 function FunctionComponent(props) {
+  const [count, setCount] = useState(0);
   return (
     <div className="border">
-      <p>{props.name}</p>
+      <button
+        onClick={() => {
+          console.log("count", count); //sy-log
+          setCount(count + 1);
+        }}
+      >
+        {count + ""}
+      </button>
+      {count % 2 ? <p>{props.name}</p> : <span>omg</span>}
     </div>
   );
 }
@@ -26,7 +42,9 @@ function FunctionComponent(props) {
 const jsx = (
   <div className="border">
     <p>React</p>
-    <a href="https://github.com/zhaoyun02/react-source-code" target="blank">源码</a>
+    <a href="https://github.com/zhaoyun02/react-source-code" target="blank">
+      源码
+    </a>
     <FunctionComponent name="函数组件" />
     <ClassComponent name="类组件" />
 
