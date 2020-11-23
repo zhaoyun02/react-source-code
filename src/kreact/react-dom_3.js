@@ -39,7 +39,6 @@ function dealProps(node, preVal, nextVal) {
       }
     } else {
       // 源码当中事件是合成事件，利用了事件委托，react17之前是把事件添加到document上，react17是添加到了container
-      // 但是今天不写这么复杂了，这里瞎写一下事件
       if (k.slice(0, 2) === "on") {
         let eventName = k.slice(2).toLowerCase();
         node.removeEventListener(eventName, preVal[k]);
@@ -59,7 +58,6 @@ function dealProps(node, preVal, nextVal) {
       }
     } else {
       // 源码当中事件是合成事件，利用了事件委托，react17之前是把事件添加到document上，react17是添加到了container
-      // 但是今天不写这么复杂了，这里瞎写一下事件
       if (k.slice(0, 2) === "on") {
         let eventName = k.slice(2).toLowerCase();
         node.addEventListener(eventName, nextVal[k]);
